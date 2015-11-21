@@ -1,0 +1,22 @@
+.background {
+  background-image: url("../background.jpg");
+}
+
+.container{
+  text-align: center;
+}
+
+.login {
+  display: inline-block;
+}
+
+.email {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.password{
+  display: block;
+  margin-bottom: 0.5em;
+}
+

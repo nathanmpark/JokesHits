@@ -1,11 +1,17 @@
-
 <div class="container">
+
+  <h1>Welcome to JokeShit</h1>
+  <h3>Your local messenger for random jokes</h3>
+
+  <h2><%= flash[:error] %></h2>
+
   <h1>Log In</h1>
-  <form action='/sessions' method='post'>
-
-    <input type='text', name="email" placeholder="email">
-
-    <input type='password', name="password" placeholder="Password">
-
+  <form class="login" action='/sessions' method='post'>
+    <input class="email" type='text', name="email" placeholder="email">
+    <input class="password" type='password', name="password" placeholder="Password">
     <input type="submit" value="Login">
   </form>
+
+
+
+</div>

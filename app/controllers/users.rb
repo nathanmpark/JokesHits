@@ -1,11 +1,11 @@
 enable :sessions
 
-get '/users' do
-  erb :'user/index'
-end
+# get '/users' do
+#   erb :'user/index'
+# end
 
 get '/users/new' do
-  erb :'user/new'
+  erb :'users/new'
 end
 
 post '/users' do
@@ -19,19 +19,18 @@ post '/users' do
   end
 end
 
-
 get '/users/:id' do
-  erb :'user/users'
+  erb :'users/show'
 end
 
-get '/users/:id/edit' do
-  erb :'user/edit'
-end
+# get '/users/:id/edit' do
+#   erb :'users/edit'
+# end
 
-put '/users/:id' do
-  erb :'user/users'
-end
+# put '/users/:id' do
+#   erb :'users/users'
+# end
 
-delete '/users/:id' do
-  redirect '/'
-end
+# delete '/users/:id' do
+#   redirect '/'
+# end
