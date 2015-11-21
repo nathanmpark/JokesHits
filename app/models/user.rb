@@ -1,7 +1,6 @@
-require 'bcrypt'
 class User < ActiveRecord::Base
-  has_many :contacts, through: :histories
-  has_many :histories
+  has_many :contacts
+  has_many :messages
   include BCrypt
 
   def password
