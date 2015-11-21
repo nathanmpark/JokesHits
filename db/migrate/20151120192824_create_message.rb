@@ -1,4 +1,4 @@
-class CreateMessageTable < ActiveRecord::Migration
+class CreateMessage < ActiveRecord::Migration
   def change
     create_table :messages do |t|
       t.text :message
