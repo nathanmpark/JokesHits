@@ -1,4 +1,4 @@
 class Contact < ActiveRecord::Base
-  has_many :users, through: :histories
-  has_many :histories
+  belongs_to :user
+  has_many :messages
 end
