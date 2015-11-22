@@ -15,7 +15,7 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-
+require 'twilio-ruby'
 require 'sinatra'
 require 'sinatra/flash'
 require "sinatra/reloader" if development?
