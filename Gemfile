@@ -15,6 +15,7 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 
 gem 'shotgun'
+gem 'faker'
 
 gem 'json'
 gem 'twilio-ruby', '~> 4.2.1'
@@ -28,7 +29,6 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
 end
 
 
