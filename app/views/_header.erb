@@ -1,5 +1,13 @@
 <header>
-  <h1>Most important heading here</h1>
-  <h3>Less important heading here</h3>
+  <h3>Hi <%= current_user.first_name %></h3>
+<nav>
+  <a href="/contacts">Contacts</a> |
+  <a href="/users/<%= current_user.id %>">Profile</a> |
+  <a href="/messages/new">New Message</a> |
+  <form action="/sessions/<%= current_user.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Log out">
+  </form>
+</nav>
   <p>Some additional information here</p>
 </header>
