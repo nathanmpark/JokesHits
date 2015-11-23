@@ -17,3 +17,4 @@ Resource.create(name: "Chuck Norris", link: "http://api.icndb.com/jokes/random?e
 
 User.create(first_name: "Paul", last_name: "Etscheit", email: "12345", password: "ger11840")
 Contact.create(first_name: "Chris", last_name: "Mark", number: "5104272088", user_id: 11)
+Contact.create(first_name: "Nathan", last_name: "Park", number: "7034891058", user_id: 12)

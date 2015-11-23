@@ -4,14 +4,16 @@
   <h3>Your local messenger for random jokes</h3>
 
   <h2><%= flash[:error] %></h2>
+  <div id="login_box">
+    <h1>Log In</h1>
+    <form class="login" action='/sessions' method='post'>
+      <input class="email" type='text', name="email" placeholder="email">
+      <input class="password" type='password', name="password" placeholder="Password">
+      <input type="submit" value="Login">
+    </form>
 
-  <h1>Log In</h1>
-  <form class="login" action='/sessions' method='post'>
-    <input class="email" type='text', name="email" placeholder="email">
-    <input class="password" type='password', name="password" placeholder="Password">
-    <input type="submit" value="Login">
-  </form>
-
-
-
+    <form class="signup" action='/users/new' method='get'>
+      <input type="button" value="Sign Up">
+    </form>
+  </div>
 </div>

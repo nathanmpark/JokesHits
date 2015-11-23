@@ -1,3 +1,6 @@
+/** {
+  border: 1px black dotted;
+}*/
 .background {
   background-image: url("../background.jpg");
 }
@@ -8,6 +11,21 @@
 
 .login {
   display: inline-block;
+}
+
+#login_box {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 300px;
+  margin: 0px auto;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.signup {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .email {
@@ -38,4 +56,5 @@
 .contact:hover {
     -webkit-transform:scale(1.007); /* Safari and Chrome */
 }o
+
 
