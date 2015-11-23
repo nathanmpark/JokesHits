@@ -63,4 +63,12 @@
     -webkit-transform:scale(1.007); /* Safari and Chrome */
 }o
 
+#text_button {
+  display: inline-block;
+}
+
+#customTextField {
+  display: none;
+}
+
 
