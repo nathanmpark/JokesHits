@@ -1,8 +1,20 @@
 <div class="container">
 
-  <h1>Welcome to the home page</h1>
+  <h1>These are your contacts</h1>
 
   <h3>Here are all your contacts</h3>
 
+
+    <% @contacts.each do |contact| %>
+      <div class="contact" id="<%= contact.id %>">
+        <p id="contact_name"><%= contact.first_name + " " + contact.last_name %></p>
+        <p class="contact_number>"><%= contact.number %></p>
+        <ul id="<%= contact.id %>message_list"></ul>
+      </div>
+    <% end %>
+
 </div>
+
+
+<%= ENV['AUTH_TOKEN'] %>
 

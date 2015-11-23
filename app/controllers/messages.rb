@@ -1,6 +1,11 @@
 # require 'twilio-ruby'
 
 get '/messages' do
+  p "*" * 90
+  p params[:contact_id]
+  p "*" * 90
+  @message = Message.where(contact_id: params[:contact_id]).select("message")
+  return erb :'_message', locals: {messages: @message}, layout: false
   # all you previous messages with contacts
   erb :'messages/index'
 end
@@ -16,8 +21,8 @@ post '/messages' do
   @contact = Contact.find(params[:id])
   @source = Resource.find(params[:api_id])
 
-  account_sid = 'AC3124f6b1ef51ec688e5d3ec3338ab0a6'
-  auth_token = '855bddcd83ba05865561d4c8e2f6cfc0'
+  account_sid = ENV['TWILLIO_SID']
+  auth_token = ENV['TWILLIO_AUTH_TOKEN']
 
   @client = Twilio::REST::Client.new account_sid, auth_token
   resp = Net::HTTP.get_response(URI.parse(@source.link))
@@ -32,6 +37,10 @@ post '/messages' do
     :to => @contact.number,
     :body => @text,
   })
+
+ test =  Message.new(contact_id: @contact.id, user_id: current_user.id, message: @text)
+ test.save
+ redirect '/messages/new'
 end
 
 get '/messages/:id' do

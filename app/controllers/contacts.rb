@@ -1,4 +1,5 @@
 get '/contacts' do
+  @contacts = current_user.contacts
   erb :'contacts/index'
 end
 
