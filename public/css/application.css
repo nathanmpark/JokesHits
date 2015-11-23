@@ -3,10 +3,16 @@
 }*/
 .background {
   background-image: url("../background.jpg");
+  background-attachment: fixed;
 }
 
 .container{
   text-align: center;
+}
+
+.message {
+  list-style-type: none;
+  line-height: 2em;
 }
 
 .login {
@@ -47,7 +53,7 @@
   border-radius: 13px;
   padding: 25px;
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.6;
   margin: auto;
   width: 60%;
   margin-top: 20px;
