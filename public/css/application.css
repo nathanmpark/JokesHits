@@ -61,6 +61,10 @@
 
 .contact:hover {
     -webkit-transform:scale(1.007); /* Safari and Chrome */
-}o
+}
+
+.navbar {
+  display: inline-block;
+}
 
 

@@ -6,7 +6,7 @@ post '/sessions' do
   @user = User.find_by_email(params[:email])
   if @user && @user.password == params[:password]
     session[:id] = @user.id
-    redirect "users/#{@user.id}/contacts"
+    redirect "/contacts"
   else
     flash[:error] = "Wrong Password or Username"
     redirect '/'
