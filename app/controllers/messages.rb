@@ -24,10 +24,13 @@ post '/messages' do
   # Is needed because @text evaluates ruby commands stored in the database!!!
   data = resp.body     # <----
   joke = JSON.parse(data) # <----
-
-  @text = eval(@source.access)
+  if params[:custom_text]
+    @text = params[:custom_text]
+  else
+    @text = eval(@source.access)
+  end
   @client.account.messages.create({
-    :from => '+16505499548',
+    :from => '+1 650-549-9548',
     :to => @contact.number,
     :body => @text,
   })

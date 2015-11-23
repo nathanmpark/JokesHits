@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   clickChecker();
+  customeMessage();
 
 });
 
@@ -28,4 +29,13 @@ var clickChecker = function(){
     });
 
   });
+};
+
+var customeMessage = function(){
+  $('#text_button').on('click', function(event){
+    event.preventDefault();
+    $(this).hide();
+    $('#customTextField').toggle();
+  });
+
 };

@@ -67,4 +67,12 @@
   display: inline-block;
 }
 
+#text_button {
+  display: inline-block;
+}
+
+#customTextField {
+  display: none;
+}
+
 
