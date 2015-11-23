@@ -15,6 +15,7 @@ end
 
 delete '/sessions/:id' do
  session[:id] = nil
+ redirect '/'
 end
 
 ####### Just for testing ######

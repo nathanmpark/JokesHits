@@ -18,6 +18,9 @@
   <title></title>
 </head>
 <body class="background">
+  <% if current_user %>
+    <%= erb :'_header' %>
+  <% end %>
   <%= yield %>
 </body>
 </html>

@@ -1,19 +1,13 @@
 # require 'twilio-ruby'
 
 get '/messages' do
-  p "*" * 90
-  p params[:contact_id]
-  p "*" * 90
   @message = Message.where(contact_id: params[:contact_id]).select("message")
   return erb :'_message', locals: {messages: @message}, layout: false
-  # all you previous messages with contacts
-  erb :'messages/index'
 end
 
 get '/messages/new' do
   @contacts = current_user.contacts
   @source = Resource.all
-
   erb :'messages/new'
 end
 
