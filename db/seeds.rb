@@ -15,6 +15,9 @@ end
 Resource.create(name: "Yo Mamma", link: "http://api.yomomma.info/", access: "joke['joke']")
 Resource.create(name: "Chuck Norris", link: "http://api.icndb.com/jokes/random?exclude=Array", access: "joke['value']['joke']")
 
-User.create(first_name: "Paul", last_name: "Etscheit", email: "12345", password: "ger11840")
+User.create(first_name: "Paul", last_name: "Etscheit", email: "etscheitp@googlemail.com", password: "ger11840")
+User.create(first_name: "Paul", last_name: "Etscheit", email: "etscheitp@gmail.com", password: "ger11840")
 Contact.create(first_name: "Chris", last_name: "Mark", number: "5104272088", user_id: 11)
+Contact.create(first_name: "Chris", last_name: "Mark", number: "5104272088", user_id: 12)
 Contact.create(first_name: "Nathan", last_name: "Park", number: "7034891058", user_id: 11)
+Contact.create(first_name: "Nathan", last_name: "Park", number: "7034891058", user_id: 12)
