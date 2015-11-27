@@ -40,7 +40,7 @@ end
 post '/contacts' do
   @contact = Contact.new(first_name: params[:first_name], last_name: params[:last_name], number: params[:number], user_id: current_user.id)
   if @contact && @contact.save
-    redirect "/contacts/#{@contact.id}"
+    redirect "/contacts"
   else
     @errors = @contact.errors.full_messages
     redirect '/contacts/new'

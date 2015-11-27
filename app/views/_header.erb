@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<nav id="nav_spec" >
+  <div id="nav-container">
+    <div >
       <a class="navbar-brand" href="/contacts">JokeShit</a>
     </div>
     <div>
@@ -18,7 +18,8 @@
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/users/<%= current_user.id %>">Profile</a></li>
         <li><a href="/contacts">Contacts</a></li>
-        <li><a href="messages/new">New Message</a></li>
+        <li><a href="/messages/new">New Message</a></li>
+        <li><a href="/contacts/new">Add Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
@@ -27,7 +28,6 @@
           <li><a href="users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a href="sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         <% end %>
-
       </ul>
     </div>
   </div>
