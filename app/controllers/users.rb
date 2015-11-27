@@ -20,7 +20,6 @@ end
 # end
 
 get '/users/new' do
-  p "happening"
   redirect 'https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=%2Fprofile&redirect_uri=http://localhost:9393/users&response_type=code&client_id=1020476674313-siqcb9ncfralo2qtgf37f2m96la4erpm.apps.googleusercontent.com'
 end
 
@@ -50,7 +49,7 @@ get '/users' do
     redirect_uri: 'http://localhost:9393/users',
     grant_type: 'authorization_code'
   }
-  post_response = HTTParty.post("https://accounts.google.com/o/oauth2/token", body: body)
+  p post_response = HTTParty.post("https://accounts.google.com/o/oauth2/token", body: body)
   p get_response =  HTTParty.get("https://www.googleapis.com/plus/v1/people/me?access_token=#{post_response['access_token']}")
 
   email = get_response["emails"][0]["value"]

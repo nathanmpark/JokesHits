@@ -17,7 +17,6 @@ get '/sessions' do
   name = get_response["displayName"]
 
   @user = User.find_by_email(email)
-
   if @user
     session[:id] = @user.id
     redirect '/'
@@ -27,7 +26,7 @@ get '/sessions' do
   end
 end
 
-delete '/sessions/:id' do
+get '/sessions/delete' do
  session[:id] = nil
  redirect '/'
 end
