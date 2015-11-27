@@ -16,6 +16,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'faker'
+gem 'httparty'
 
 gem 'json'
 gem 'twilio-ruby', '~> 4.2.1'

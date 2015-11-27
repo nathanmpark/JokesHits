@@ -19,7 +19,7 @@ require 'twilio-ruby'
 require 'sinatra'
 require 'sinatra/flash'
 require "sinatra/reloader" if development?
-
+require 'httparty'
 require 'erb'
 
 require 'bcrypt'
