@@ -22,7 +22,7 @@ post '/messages' do
   # Is needed because @text evaluates ruby commands stored in the database!!!
   data = resp.body     # <----
   joke = JSON.parse(data) # <----
-  if params[:custom_text]
+  if params[:custom_text].length > 0
     @text = params[:custom_text]
   else
     @text = eval(@source.access)

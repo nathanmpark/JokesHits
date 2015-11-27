@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'pg'
 
 # Sinatra driver
+gem 'dotenv'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-flash'
@@ -33,4 +34,3 @@ group :test, :development do
 end
 
 
-gem 'dotenv'
