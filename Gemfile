@@ -8,14 +8,15 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-flash'
 gem 'bcrypt'
-
+gem 'google_contacts_api'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'oauth2'
 gem 'rake'
 
 gem 'shotgun'
 gem 'faker'
+gem 'httparty'
 
 gem 'json'
 gem 'twilio-ruby', '~> 4.2.1'

@@ -8,10 +8,10 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-
+require 'oauth2'
 require 'uri'
 require 'pathname'
-
+require 'google_contacts_api'
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -19,7 +19,7 @@ require 'twilio-ruby'
 require 'sinatra'
 require 'sinatra/flash'
 require "sinatra/reloader" if development?
-
+require 'httparty'
 require 'erb'
 
 require 'bcrypt'

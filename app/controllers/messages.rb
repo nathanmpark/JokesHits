@@ -1,5 +1,3 @@
-# require 'twilio-ruby'
-
 get '/messages' do
   @message = Message.where(contact_id: params[:contact_id]).select("message")
   return erb :'_message', locals: {messages: @message}, layout: false
