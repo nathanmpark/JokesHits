@@ -1,5 +1,5 @@
 get '/sessions/new' do
-  redirect 'https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=%2Fprofile&redirect_uri=http://localhost:9393/sessions&response_type=code&client_id=1020476674313-siqcb9ncfralo2qtgf37f2m96la4erpm.apps.googleusercontent.com'
+  redirect 'https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=%2Fprofile&redirect_uri=https://jokeshits.herokuapp.com/sessions&response_type=code&client_id=1092575859346-dfnpd043pvl650ie3a7l1fmotlo1c2ha.apps.googleusercontent.com'
 end
 
 get '/sessions' do
@@ -7,7 +7,7 @@ get '/sessions' do
     code: params[:code],
     client_id: ENV['CLIENT_ID'],
     client_secret: ENV['CLIENT_SECRET'],
-    redirect_uri: 'http://localhost:9393/sessions',
+    redirect_uri: 'https://jokeshits.herokuapp.com/sessions',
     grant_type: 'authorization_code'
   }
   post_response = HTTParty.post("https://accounts.google.com/o/oauth2/token", body: body)
