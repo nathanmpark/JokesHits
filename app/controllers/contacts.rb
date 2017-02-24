@@ -1,19 +1,19 @@
 # get '/contacts/new' do
-#   redirect 'https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=%2Fprofile&redirect_uri=http://localhost:9393/contacts&response_type=code&client_id=1020476674313-siqcb9ncfralo2qtgf37f2m96la4erpm.apps.googleusercontent.com'
+#   redirect 'https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=%2Fprofile&redirect_uri=https://jokeshits.herokuapp.com/contacts&response_type=code&client_id=1020476674313-siqcb9ncfralo2qtgf37f2m96la4erpm.apps.googleusercontent.com'
 # end
 
 # # client = OAuth2::Client.new(ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], :site => 'https://example.org')
 
-# # client.auth_code.authorize_url(:redirect_uri => 'http://localhost:9393/contacts')
+# # client.auth_code.authorize_url(:redirect_uri => 'https://jokeshits.herokuapp.com/contacts')
 # # # => "https://example.org/oauth/authorization?response_type=code&client_id=client_id&redirect_uri=http://localhost:8080/oauth2/callback"
 
-# # token = client.auth_code.get_token('authorization_code_value', :redirect_uri => 'http://localhost:9393/contacts', :headers => {'Authorization' => 'Basic some_password'})
+# # token = client.auth_code.get_token('authorization_code_value', :redirect_uri => 'https://jokeshits.herokuapp.com/contacts', :headers => {'Authorization' => 'Basic some_password'})
 
 # get '/contacts' do
 #   p params[:code]
-#   site_path = 'http://localhost:9393'
+#   site_path = 'https://jokeshits.herokuapp.com'
 
-#   redirect_uri = 'http://localhost:9393/contacts'
+#   redirect_uri = 'https://jokeshits.herokuapp.com/contacts'
 #  p ENV['CLIENT_ID']
 #   client = OAuth2::Client.new(ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], :site => site_path)
 #   p "THIS IS THE AUTHORIZE URL"
