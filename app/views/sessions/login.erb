@@ -1,20 +1,19 @@
 <div class="container">
 
+  <h1>Welcome to JokesHits</h1>
+  <h3>Your local messenger for random jokes</h3>
 
   <h2><%= flash[:error] %></h2>
 
 <% if !current_user %>
   <div id="login_box">
-  <h1>Welcome to JokesHits</h1>
-  <h3>Your local messenger for random jokes</h3>
-  <!-- <h1>Sign In</h1> -->
+    <h1>Log In</h1>
 <!--     <form class="login" name="login" action='/sessions/new' method='get'>
       <input type="button" value="Login with Google">
     </form> -->
 
-    <!-- <a class="login" href="/sessions/new">Login with Google</a> -->
-    <!-- <a class="logout" href="/users/new">Sign Up with Google</a> -->
-    <a class="signin" href="/sessions/new">Sign In with Google</a>
+    <a class="login" href="/sessions/new">Login with Google</a>
+    <a class="logout" href="/users/new">Sign Up with Google</a>
 
 <!--     <form class="signup" name="logout" action='/users/new' method='get'>
       <input type="button" value="Sign Up with Google">
