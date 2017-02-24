@@ -18,14 +18,15 @@
   <title></title>
 </head>
 <body class="background">
-  <h1>Welcome to JokesHits</h1>
-  <h3>Your local messenger for random jokes</h3>
-
+  <div class="container">
+    <h1>Welcome to JokesHits</h1>
+    <h3>Your local messenger for random jokes</h3>
+  </div>
+  
   <% if current_user %>
     <%= erb :'_header' %>
   <% end %>
 
   <%= yield %>
-
 </body>
 </html>
