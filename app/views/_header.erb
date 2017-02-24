@@ -2,36 +2,33 @@
   <title>Bootstrap Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/contacts">Jokes Hits</a>
+<nav id="nav_spec" >
+  <div id="nav-container">
+    <div >
+      <a class="navbar-brand" href="/contacts">JokeShit</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="/users/<%= current_user.id %>">Profile</a></li>
-      <li><a href="/contacts">Contacts</a></li>
-      <li><a href="/messages/new">New Message</a></li>
-      <li><a href="/contacts/new">Add Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <% if current_user %>
-        <li><a href="/sessions/delete"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
-      <% else %>
-        <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="/sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <% end %>
-    </ul>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+        <li><a href="/contacts">Contacts</a></li>
+        <li><a href="/messages/new">New Message</a></li>
+        <li><a href="/contacts/new">Add Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li><a href="/sessions/delete"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+        <% else %>
+          <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>
-  
-<div class="container">
-  <h3>Welcome to Jokes Hits</h3>
-  <p>Create a contact and send a message to get started!</p>
-</div>
